@@ -1,0 +1,49 @@
+*{
+    text-align: center;
+}
+.h1fans{
+    margin-top: 8%;
+    border: #258d47 solid 1px;
+}
+
+.commentsFans{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.writeInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentblock{
+    box-shadow: 12px 12px 2px 1px rgba(29, 255, 115, 0.2);
+}
+
+.inputFans{
+    width: 30%;
+    height: 200px;
+}
+.imputmessage{
+    display: flex;
+}
+
+.imputmessage button{
+    width: 100px;
+    height: 50px;
+    margin-left: 1%;
+}
+.commentButton{
+    background-color: #258d47;
+    font-size: 14px;
+    border: #258d47 solid 1px;
+}
+
+.brandLogo:hover{
+    color: white;
+    background-color: #258d47;
+}
+.commentButton:hover{
+    color:black;
+    background-color: white;
+}

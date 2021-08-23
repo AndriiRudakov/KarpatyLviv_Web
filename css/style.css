@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+.active a{
+    background-color: #258d47;
+    color: white;
+}
+.brandLogo{
+    width: 250px;
+    font-size: 2rem;
+    font-family: 'Alfa Slab One', cursive;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+  
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #258d47;
+  color: white;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; 
+    color: black;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header-photo{
+    width: 100%;
+    margin-top: -100px;
+}
+
+h2{
+    font-size: 3em;
+    border: #258d47 solid 1px; 
+    text-align: center;
+    font-family: 'Alfa Slab One', bold;
+}
+
+.historyBlock{
+    width: 100%;
+    display: flex;
+    float: left;
+    position: relative;
+}
+
+.historyBlockimg{
+    width: 50%;
+    height: max-content;
+}
+
+.teamStory{
+    margin: 5%;
+    width: auto;
+    height: auto;
+}
+
+.storyP{
+    margin: 5%;
+    width: 50%;
+}
+
+.scoreTeam{
+    text-align: center;
+    font-size: 2em;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #258d47;
+    margin-top: 5%;
+}
