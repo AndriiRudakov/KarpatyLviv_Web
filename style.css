@@ -1,6 +1,10 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+body{
     padding: 0;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
 }
 
 ul {
@@ -25,13 +29,20 @@ ul {
     color: white;
 }
 .brandLogo{
-    width: 50px;
+    width: 250px;
+    font-size: 2rem;
+    font-family: 'Alfa Slab One', cursive;
 }
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+  
 }
 li a, .dropbtn {
   display: inline-block;
@@ -67,21 +78,54 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+    background-color: #f1f1f1; 
+    color: black;}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.mainImg{
-  width: 100%;
-  height: 900px;
-}
-.imgback{
-  width: 100%;
-}
-footer{
-  width: 100%;
-  height: 100px;
-  background-color: #258d47;
+.header-photo{
+    width: 100%;
+    margin-top: -100px;
 }
 
+h2{
+    font-size: 3em;
+    border: #258d47 solid 1px; 
+    text-align: center;
+    font-family: 'Alfa Slab One', bold;
+}
+
+.historyBlock{
+    width: 100%;
+    display: flex;
+    float: left;
+    position: relative;
+}
+
+.historyBlockimg{
+    width: 40%;
+}
+
+.teamStory{
+    margin: 5%;
+    width: auto;
+    height: auto;
+}
+
+.storyP{
+    margin: 5%;
+}
+
+.scoreTeam{
+    text-align: center;
+    font-size: 2em;
+}
+
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #258d47;
+}
