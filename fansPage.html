@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карпати Львів</title>
-    <link rel="stylesheet" href="./css/fans.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/fans.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
               <div>
                 <div>
                     <ul class="nav-links">
-                        <li class="active"><a href="./index.html">Main</a></li>
+                        <li class="active"><a href="/index.html">Main</a></li>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropbtn">Matches</a>
                             <div class="dropdown-content">
@@ -27,7 +27,7 @@
                             </div>
                           </li>
                         <li><a href="/">News</a></li>
-                        <li><a href="./fansPage.html">Fans</a></li>
+                        <li><a href="fansPage.html">Fans</a></li>
                         <li><a href="/">Contacts</a></li>
                         <li><a href="/">Admin</a></li>
                     </ul>
@@ -37,7 +37,7 @@
           </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="./index.html">Main</a></li>
+                <li><a href="/index.html">Main</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Matches</a>
                     <div class="dropdown-content">
@@ -47,7 +47,7 @@
                     </div>
                   </li>
                 <li><a href="/">News</a></li>
-                <li class="active"><a href="./fansPage.html">Fans</a></li>
+                <li class="active"><a href="/">Fans</a></li>
                 <li><a href="/">Contacts</a></li>
                 <li><a href="/">Admin</a></li>
             </ul>
@@ -55,29 +55,50 @@
         <h1 class="brandLogo">Karpaty Lviv</h1>
     </header>   
 
-    <section class="commentsFans">
+    <section class="commentsFans" id="listofComment">
         <h1 class="h1fans">Звернення фанів</h1>
-        <div class="commentblock">
-            <p>Etiam luctus tristique porta. Suspendisse potenti. Donec vitae nulla vitae erat vestibulum vestibulum. In suscipit blandit odio, at euismod lacus aliquam a. Curabitur vel tristique dui. Pellentesque at magna ultrices, mollis tellus eget, rutrum nulla. Mauris semper bibendum mauris sed gravida.</p>
-            <div class="writeInfo">
-                <p>10.10.2018, 20:33</p>
-                <h3>FootballFan</h3>
-            </div>
-        </div>
-        <hr>
-        <div class="commentblock">
-            <p>Etiam luctus tristique porta. Suspendisse potenti. Donec vitae nulla vitae erat vestibulum vestibulum. In suscipit blandit odio, at euismod lacus aliquam a. Curabitur vel tristique dui. Pellentesque at magna ultrices, mollis tellus eget, rutrum nulla. Mauris semper bibendum mauris sed gravida.</p>
-            <div class="writeInfo">
-                <p>10.10.2018, 20:33</p>
-                <h3>FootballFan</h3>
-            </div>
-        </div>
-        <hr>
         <div class="imputmessage">
-            <input class="inputFans" type="text" id="textmessage" placeholder="Написати звернення..." name="textmessage"><br>
-            <button class="commentButton">Send</button>
+            <form id="addForm" class="form-inline mb-3">
+                <input type="text" class="form-control mr-2" id="item" placeholder="Написати звернення...">
+                <input type="submit" class="btn btn-dark" value="Submit">
+              </form>
+            <!-- <input class="inputFans" type="text" id="textmessage" placeholder="Написати звернення..." name="textmessage"><br>
+            <button class="commentButton">Send</button> -->
+        </div>
+        <div class="commentblock">
+            <p>Etiam luctus tristique porta. Suspendisse potenti. Donec vitae nulla vitae erat vestibulum vestibulum. In suscipit blandit odio, at euismod lacus aliquam a. Curabitur vel tristique dui. Pellentesque at magna ultrices, mollis tellus eget, rutrum nulla. Mauris semper bibendum mauris sed gravida.</p>
+            <div class="writeInfo">
+                <p>10.10.2018, 20:33</p>
+                <h3>FootballFan</h3>
+            </div>
+        </div>
+        <hr>
+        <div class="commentblock">
+            <p>Etiam luctus tristique porta. Suspendisse potenti. Donec vitae nulla vitae erat vestibulum vestibulum. In suscipit blandit odio, at euismod lacus aliquam a. Curabitur vel tristique dui. Pellentesque at magna ultrices, mollis tellus eget, rutrum nulla. Mauris semper bibendum mauris sed gravida.</p>
+            <div class="writeInfo">
+                <p>10.10.2018, 20:33</p>
+                <h3>FootballFan</h3>
+            </div>
         </div>
     </section>
     <footer></footer>
+    <script>
+        let form = document.getElementById("addForm");
+        let items = document.getElementById("listofComment");
+
+        form.addEventListener('submit', addItem);
+
+        function addItem(e){
+            e.preventDefault();
+            
+            let newItem = document.getElementById('item').value;
+            let block = document.createElement("div");
+            block.className = "commentblock";
+            block.appendChild(document.createTextNode(newItem));
+
+            items.appendChild(block);
+        }
+
+    </script>
 </body>
 </html>
